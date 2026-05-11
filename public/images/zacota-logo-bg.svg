@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#250006"/>
+  <text x="50%" y="38%" font-family="Georgia, serif" font-size="120" font-weight="bold" fill="white" fill-opacity="0.9" text-anchor="middle" dominant-baseline="middle">ZACOTA</text>
+  <ellipse cx="300" cy="58%" rx="90" ry="20" fill="none" stroke="white" stroke-width="3" stroke-opacity="0.8"/>
+  <text x="50%" y="70%" font-family="Georgia, serif" font-size="22" fill="white" fill-opacity="0.8" text-anchor="middle">RESTAURANTE E</text>
+  <text x="50%" y="77%" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="white" fill-opacity="0.8" text-anchor="middle">PIZZARIA</text>
+</svg>
