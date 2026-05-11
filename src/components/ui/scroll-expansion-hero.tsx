@@ -41,6 +41,7 @@ const ScrollExpandMedia = ({
   const [mediaFullyExpanded, setMediaFullyExpanded] = useState<boolean>(false);
   const [touchStartY, setTouchStartY] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [pageScrollY, setPageScrollY] = useState<number>(0);
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
@@ -101,6 +102,7 @@ const ScrollExpandMedia = ({
 
     const handleScroll = (): void => {
       if (!mediaFullyExpanded) window.scrollTo(0, 0);
+      else setPageScrollY(window.scrollY);
     };
 
     window.addEventListener('wheel', handleWheel as unknown as EventListener, { passive: false });
@@ -246,6 +248,27 @@ const ScrollExpandMedia = ({
                 )}
               </motion.div>
             </div>
+
+            {/* Scroll-down hint — appears after video fully expands */}
+            <motion.div
+              className="fixed bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 z-50 pointer-events-none"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: mediaFullyExpanded && pageScrollY < 60 ? 1 : 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.div
+                className="flex flex-col items-center gap-1"
+                animate={mediaFullyExpanded && pageScrollY < 60 ? { y: [0, 6, 0] } : {}}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <p className="text-[#d4a373] text-xs tracking-widest uppercase drop-shadow-lg">
+                  {scrollToExpand}
+                </p>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 3v10M3 8l5 5 5-5" stroke="#d4a373" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </motion.div>
+            </motion.div>
 
             {/* Content after expansion */}
             <motion.section
