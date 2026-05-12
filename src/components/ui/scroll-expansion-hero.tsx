@@ -44,6 +44,22 @@ const ScrollExpandMedia = ({
   const [pageScrollY, setPageScrollY] = useState<number>(0);
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const attempt = () => {
+      video.play().catch(() => {
+        document.addEventListener('touchstart', () => video.play(), { once: true });
+      });
+    };
+    if (video.readyState >= 2) {
+      attempt();
+    } else {
+      video.addEventListener('canplay', attempt, { once: true });
+    }
+  }, []);
 
   useEffect(() => {
     setScrollProgress(0);
@@ -169,7 +185,7 @@ const ScrollExpandMedia = ({
                 {mediaType === 'video' ? (
                   <div className="relative w-full h-full pointer-events-none">
                     <video
-                      src={mediaSrc}
+                      ref={videoRef}
                       poster={posterSrc}
                       autoPlay
                       muted
@@ -179,7 +195,10 @@ const ScrollExpandMedia = ({
                       className="w-full h-full object-cover"
                       controls={false}
                       disablePictureInPicture
-                    />
+                    >
+                      <source src={mediaSrc} type="video/mp4" />
+                      <source src={mediaSrc} type="video/quicktime" />
+                    </video>
                     <motion.div
                       className="absolute inset-0 bg-[#1a0005]/40"
                       animate={{ opacity: 0.6 - scrollProgress * 0.4 }}
