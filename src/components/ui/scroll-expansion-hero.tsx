@@ -162,7 +162,7 @@ const ScrollExpandMedia = ({
               src={bgImageSrc}
               alt="Background Zacota"
               fill
-              className="object-cover object-[center_20%]"
+              className="object-cover object-center"
               priority
             />
             <div className="absolute inset-0 bg-[#1a0005]/60" />
