@@ -186,6 +186,7 @@ const ScrollExpandMedia = ({
                   <div className="relative w-full h-full pointer-events-none">
                     <video
                       ref={videoRef}
+                      src={mediaSrc}
                       poster={posterSrc}
                       autoPlay
                       muted
@@ -195,10 +196,7 @@ const ScrollExpandMedia = ({
                       className="w-full h-full object-cover"
                       controls={false}
                       disablePictureInPicture
-                    >
-                      <source src={mediaSrc} type="video/mp4" />
-                      <source src={mediaSrc} type="video/quicktime" />
-                    </video>
+                    />
                     <motion.div
                       className="absolute inset-0 bg-[#1a0005]/40"
                       animate={{ opacity: 0.6 - scrollProgress * 0.4 }}
