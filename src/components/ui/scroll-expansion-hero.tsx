@@ -162,10 +162,10 @@ const ScrollExpandMedia = ({
               src={bgImageSrc}
               alt="Background Zacota"
               fill
-              className="object-cover object-center"
+              className="object-cover object-[center_20%]"
               priority
             />
-            <div className="absolute inset-0 bg-[#1a0005]/70" />
+            <div className="absolute inset-0 bg-[#1a0005]/60" />
           </motion.div>
 
           <div className="container mx-auto flex flex-col items-center justify-start relative z-10 px-4">
