@@ -34,7 +34,7 @@ export default function HeroMediaScroll() {
     <ScrollExpandMedia
       mediaType="video"
       mediaSrc="/videos/zacota-hero.mov"
-      bgImageSrc="/images/imagem fachada zacota.webp"
+      bgImageSrc="/images/zacota-fachada.webp"
       title="Zacota"
       subtitle="Restaurante e Pizzaria"
       tagline="Viva essa experiência de sabor, aconchego e tradição."
