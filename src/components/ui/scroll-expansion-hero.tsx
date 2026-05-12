@@ -234,41 +234,25 @@ const ScrollExpandMedia = ({
                   </p>
                 )}
                 {ctaButtons}
-                {scrollToExpand && (
-                  <motion.div
-                    className="flex flex-col items-center gap-1 mt-2"
-                    animate={{ y: [0, 6, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                  >
-                    <p className="text-[#d4a373] text-xs tracking-widest uppercase">{scrollToExpand}</p>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M8 3v10M3 8l5 5 5-5" stroke="#d4a373" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </motion.div>
-                )}
               </motion.div>
-            </div>
 
-            {/* Scroll-down hint — appears after video fully expands */}
-            <motion.div
-              className="fixed bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 z-50 pointer-events-none"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: mediaFullyExpanded && pageScrollY < 60 ? 1 : 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <motion.div
-                className="flex flex-col items-center gap-1"
-                animate={mediaFullyExpanded && pageScrollY < 60 ? { y: [0, 6, 0] } : {}}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              >
-                <p className="text-[#d4a373] text-xs tracking-widest uppercase drop-shadow-lg">
-                  {scrollToExpand}
-                </p>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8 3v10M3 8l5 5 5-5" stroke="#d4a373" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </motion.div>
-            </motion.div>
+              {/* Deslize para descobrir — visível durante toda a expansão, some só no final */}
+              {scrollToExpand && !mediaFullyExpanded && (
+                <motion.div
+                  className="absolute bottom-4 left-0 right-0 flex flex-col items-center gap-1 z-20 pointer-events-none"
+                  animate={{
+                    opacity: Math.max(0, 1 - scrollProgress * 1.2),
+                    y: [0, 6, 0],
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                >
+                  <p className="text-[#d4a373] text-xs tracking-widest uppercase drop-shadow-lg">{scrollToExpand}</p>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 3v10M3 8l5 5 5-5" stroke="#d4a373" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </motion.div>
+              )}
+            </div>
 
             {/* Content after expansion */}
             <motion.section
