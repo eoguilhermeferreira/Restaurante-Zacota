@@ -241,12 +241,12 @@ const ScrollExpandMedia = ({
 
               {/* Tagline + CTAs at bottom */}
               <motion.div
-                className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-4 z-20 px-4"
+                className="absolute bottom-24 left-0 right-0 flex flex-col items-center gap-4 z-20 px-4"
                 animate={{ opacity: Math.max(0, 1 - scrollProgress * 3) }}
                 transition={{ duration: 0.1 }}
               >
                 {tagline && (
-                  <p className="text-[#e8ddd4] text-center text-sm md:text-base max-w-xs md:max-w-md">
+                  <p className="font-display italic text-[#e8ddd4] text-center text-lg md:text-xl max-w-xs md:max-w-md leading-relaxed tracking-wide">
                     {tagline}
                   </p>
                 )}
