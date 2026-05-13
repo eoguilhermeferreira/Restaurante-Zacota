@@ -12,9 +12,9 @@ export default function VideoSection() {
     offset: ['start end', 'end start'],
   });
 
-  const width = useTransform(scrollYProgress, [0, 0.5], ['62%', '100%']);
-  const borderRadius = useTransform(scrollYProgress, [0, 0.5], ['20px', '0px']);
-  const scale = useTransform(scrollYProgress, [0, 0.4], [0.88, 1]);
+  const width = useTransform(scrollYProgress, [0, 0.6], ['92%', '100%']);
+  const borderRadius = useTransform(scrollYProgress, [0, 0.6], ['16px', '0px']);
+  const scale = useTransform(scrollYProgress, [0, 0.4], [0.97, 1]);
 
   useEffect(() => {
     const video = videoRef.current;
