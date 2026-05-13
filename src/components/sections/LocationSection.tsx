@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, MessageCircle, Clock, Navigation } from 'lucide-react';
-import { WHATSAPP_URL, GOOGLE_MAPS_URL, ENDERECO, HORARIO } from '@/lib/constants';
+import { WHATSAPP_URL, GOOGLE_MAPS_URL, GOOGLE_MAPS_EMBED, INSTAGRAM_URL, ENDERECO, HORARIO } from '@/lib/constants';
 
 export default function LocationSection() {
   return (
@@ -11,7 +11,6 @@ export default function LocationSection() {
       <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3a0710]/50 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-4 md:px-8">
-        {/* Header */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -42,7 +41,7 @@ export default function LocationSection() {
               </div>
               <div>
                 <p className="text-[#d4a373] text-xs uppercase tracking-widest mb-1 font-medium">Endereço</p>
-                <p className="text-[#F8F3EF] text-sm leading-relaxed">{ENDERECO}</p>
+                <p className="text-[#F8F3EF] text-sm leading-relaxed whitespace-pre-line">{ENDERECO}</p>
               </div>
             </div>
 
@@ -52,9 +51,28 @@ export default function LocationSection() {
               </div>
               <div>
                 <p className="text-[#d4a373] text-xs uppercase tracking-widest mb-1 font-medium">Horários</p>
-                <p className="text-[#F8F3EF] text-sm leading-relaxed whitespace-pre-line">
-                  {HORARIO.split('|').join('\n')}
+                <p className="text-[#F8F3EF] text-sm leading-relaxed">
+                  {HORARIO.split('|').map((h, i) => (
+                    <span key={i} className="block">{h.trim()}</span>
+                  ))}
                 </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full bg-[#d4a373]/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#d4a373" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div>
+                <p className="text-[#d4a373] text-xs uppercase tracking-widest mb-1 font-medium">Instagram</p>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#F8F3EF] text-sm hover:text-[#d4a373] transition-colors"
+                >
+                  @zacotarestaurante
+                </a>
               </div>
             </div>
 
@@ -80,47 +98,22 @@ export default function LocationSection() {
             </div>
           </motion.div>
 
-          {/* Map placeholder */}
+          {/* Google Maps embed */}
           <motion.div
-            className="w-full lg:w-3/5 rounded-2xl overflow-hidden min-h-[300px] md:min-h-[380px]"
+            className="w-full lg:w-3/5 rounded-2xl overflow-hidden min-h-[300px] md:min-h-[400px] border border-[#d4a373]/20 shadow-2xl"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            {/* Placeholder for Google Maps embed — replace src with actual embed URL */}
-            <div className="w-full h-full min-h-[300px] md:min-h-[380px] bg-[#31000a] border border-[#d4a373]/20 rounded-2xl flex flex-col items-center justify-center gap-4 relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10">
-                {/* Grid pattern */}
-                <svg width="100%" height="100%">
-                  <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d4a373" strokeWidth="0.5"/>
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
-                </svg>
-              </div>
-              <div className="w-14 h-14 rounded-full bg-[#d4a373]/20 flex items-center justify-center">
-                <MapPin size={28} className="text-[#d4a373]" />
-              </div>
-              <div className="text-center px-6">
-                <p className="font-display text-xl text-[#F8F3EF] mb-1">Zacota</p>
-                <p className="text-[#e8ddd4] text-sm">{ENDERECO}</p>
-                <p className="text-[#d4a373]/70 text-xs mt-3">
-                  Substitua este placeholder pelo embed do Google Maps
-                </p>
-              </div>
-              <a
-                href={GOOGLE_MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline-gold text-sm flex items-center gap-2"
-              >
-                <Navigation size={14} />
-                Ver no mapa
-              </a>
-            </div>
+            <iframe
+              src={GOOGLE_MAPS_EMBED}
+              className="w-full h-full min-h-[300px] md:min-h-[400px] border-0 rounded-2xl"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização Zacota Restaurante e Pizzaria"
+            />
           </motion.div>
         </div>
       </div>

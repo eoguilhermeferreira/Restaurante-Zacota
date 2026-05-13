@@ -4,6 +4,7 @@ import RodizioSection from '@/components/sections/RodizioSection';
 import MenuShowcase from '@/components/sections/MenuShowcase';
 import GallerySection from '@/components/sections/GallerySection';
 import ExperienceCards from '@/components/sections/ExperienceCards';
+import HorariosSection from '@/components/sections/HorariosSection';
 import LocationSection from '@/components/sections/LocationSection';
 import FinalCTA from '@/components/sections/FinalCTA';
 import Footer from '@/components/sections/Footer';
@@ -18,6 +19,7 @@ export default function Home() {
       <MenuShowcase />
       <GallerySection />
       <ExperienceCards />
+      <HorariosSection />
       <LocationSection />
       <FinalCTA />
       <Footer />
