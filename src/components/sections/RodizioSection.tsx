@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_RESERVA } from '@/lib/constants';
 import { Calendar, Star, Clock } from 'lucide-react';
 
 const highlights = [
@@ -70,7 +70,7 @@ export default function RodizioSection() {
           <div className="w-16 h-px bg-[#d4a373]/40 my-2" />
 
           <motion.a
-            href={WHATSAPP_URL}
+            href={WHATSAPP_RESERVA}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold text-base"

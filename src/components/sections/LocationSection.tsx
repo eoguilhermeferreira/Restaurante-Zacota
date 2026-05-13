@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, MessageCircle, Clock, Navigation } from 'lucide-react';
-import { WHATSAPP_URL, GOOGLE_MAPS_URL, GOOGLE_MAPS_EMBED, INSTAGRAM_URL, ENDERECO, HORARIO } from '@/lib/constants';
+import { WHATSAPP_LOCALIZACAO, GOOGLE_MAPS_URL, GOOGLE_MAPS_EMBED, INSTAGRAM_URL, ENDERECO, HORARIO } from '@/lib/constants';
 
 export default function LocationSection() {
   return (
@@ -87,7 +87,7 @@ export default function LocationSection() {
                 Abrir no Google Maps
               </a>
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_LOCALIZACAO}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold flex items-center justify-center gap-2 text-sm"

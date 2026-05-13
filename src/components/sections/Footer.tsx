@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { MapPin, Clock } from 'lucide-react';
-import { WHATSAPP_URL, INSTAGRAM_URL, ENDERECO, HORARIO } from '@/lib/constants';
+import { WHATSAPP_CONTATO, INSTAGRAM_URL, ENDERECO, HORARIO } from '@/lib/constants';
 
 export default function Footer() {
   const links = [
@@ -75,7 +75,7 @@ export default function Footer() {
 
             <div className="flex gap-4 mt-2">
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_CONTATO}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#31000a] border border-[#d4a373]/20 flex items-center justify-center hover:border-[#d4a373]/60 transition-colors"

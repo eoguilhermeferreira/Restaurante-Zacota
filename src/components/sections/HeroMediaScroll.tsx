@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
-import { CARDAPIO_URL, WHATSAPP_URL } from '@/lib/constants';
+import { CARDAPIO_URL, WHATSAPP_PEDIDO } from '@/lib/constants';
 
 export default function HeroMediaScroll() {
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function HeroMediaScroll() {
         Ver Cardápio
       </a>
       <a
-        href={WHATSAPP_URL}
+        href={WHATSAPP_PEDIDO}
         target="_blank"
         rel="noopener noreferrer"
         className="btn-outline-gold text-sm md:text-base"

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MessageCircle, BookOpen, ShoppingBag } from 'lucide-react';
-import { CARDAPIO_URL, WHATSAPP_URL } from '@/lib/constants';
+import { CARDAPIO_URL, WHATSAPP_PEDIDO, WHATSAPP_CONTATO } from '@/lib/constants';
 
 export default function FinalCTA() {
   return (
@@ -41,7 +41,7 @@ export default function FinalCTA() {
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 justify-center mt-4">
             <motion.a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_PEDIDO}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold flex items-center gap-2"
@@ -52,7 +52,7 @@ export default function FinalCTA() {
               Fazer Pedido
             </motion.a>
             <motion.a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_CONTATO}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline-gold flex items-center gap-2"
