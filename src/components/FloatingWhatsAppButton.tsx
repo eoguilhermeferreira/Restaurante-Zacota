@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { WHATSAPP_CONTATO } from '@/lib/constants';
+import { WHATSAPP_PEDIDO } from '@/lib/constants';
 
 export default function FloatingWhatsAppButton() {
   return (
     <motion.a
-      href={WHATSAPP_CONTATO}
+      href={WHATSAPP_PEDIDO}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg whatsapp-pulse"

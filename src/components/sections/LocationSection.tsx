@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, MessageCircle, Clock, Navigation } from 'lucide-react';
-import { WHATSAPP_LOCALIZACAO, GOOGLE_MAPS_URL, GOOGLE_MAPS_EMBED, INSTAGRAM_URL, ENDERECO, HORARIO } from '@/lib/constants';
+import { MapPin, Clock, Navigation } from 'lucide-react';
+import { GOOGLE_MAPS_URL, GOOGLE_MAPS_EMBED, INSTAGRAM_URL, ENDERECO, HORARIO } from '@/lib/constants';
 
 export default function LocationSection() {
   return (
@@ -81,19 +81,10 @@ export default function LocationSection() {
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline-gold flex items-center justify-center gap-2 text-sm"
+                className="btn-gold flex items-center justify-center gap-2 text-sm"
               >
                 <Navigation size={16} />
                 Abrir no Google Maps
-              </a>
-              <a
-                href={WHATSAPP_LOCALIZACAO}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-gold flex items-center justify-center gap-2 text-sm"
-              >
-                <MessageCircle size={16} />
-                Chamar no WhatsApp
               </a>
             </div>
           </motion.div>
