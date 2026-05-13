@@ -12,7 +12,7 @@ export default function VideoSection() {
     offset: ['start start', 'end end'],
   });
 
-  const height = useTransform(scrollYProgress, [0, 0.85], ['38vh', '92vh']);
+  const height = useTransform(scrollYProgress, [0, 0.85], ['65vh', '92vh']);
   const borderRadius = useTransform(scrollYProgress, [0, 0.85], ['24px', '8px']);
   const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
