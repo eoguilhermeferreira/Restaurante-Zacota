@@ -11,6 +11,7 @@ const cards = [
       'Um espaço pensado para que você se sinta em casa. Iluminação suave, decoração acolhedora e muito conforto para relaxar.',
     image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop&q=80',
     tag: 'Atmosfera',
+    position: 'object-center',
   },
   {
     title: 'Comida Feita com Carinho',
@@ -18,6 +19,7 @@ const cards = [
       'Cada prato preparado com ingredientes frescos e selecionados. Receitas que carregam sabor, história e muito amor.',
     image: '/images/exp-comida.jpg',
     tag: 'Gastronomia',
+    position: 'object-center',
   },
   {
     title: 'Pizzas e Porções à Noite',
@@ -25,6 +27,7 @@ const cards = [
       'À noite, o Zacota se transforma. Pizzas artesanais saindo do forno, porções generosas e muita animação.',
     image: '/images/exp-pizza-noite.jpg',
     tag: 'Noite',
+    position: 'object-center',
   },
   {
     title: 'Momentos em Família',
@@ -32,6 +35,7 @@ const cards = [
       'O lugar ideal para reunir quem você ama. Mesas grandes, ambiente familiar e pratos para compartilhar.',
     image: '/images/exp-familia.jpg',
     tag: 'Família',
+    position: 'object-center',
   },
   {
     title: 'Bebidas e Encontros',
@@ -39,10 +43,11 @@ const cards = [
       'Drinks artesanais, sucos naturais e cervejas especiais. O brinde perfeito para celebrar bons momentos.',
     image: '/images/exp-encontros.jpg',
     tag: 'Bebidas',
+    position: 'object-top',
   },
 ];
 
-function StackCard({ card, index, total }: { card: typeof cards[0]; index: number; total: number }) {
+function StackCard({ card, index, total }: { card: (typeof cards)[0]; index: number; total: number }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -65,7 +70,7 @@ function StackCard({ card, index, total }: { card: typeof cards[0]; index: numbe
             src={card.image}
             alt={card.title}
             fill
-            className="object-cover"
+            className={`object-cover ${card.position}`}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1a0005]/80 via-[#1a0005]/20 to-transparent" />
           <div className="absolute top-4 left-4">
