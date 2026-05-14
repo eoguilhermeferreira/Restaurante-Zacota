@@ -10,7 +10,7 @@ const categories = [
     title: 'Pratos',
     description: 'Sabores caseiros e gourmet feitos com ingredientes frescos e muito carinho.',
     image: '/images/prato.jpg',
-    position: 'object-[center_35%]',
+    position: 'object-[center_60%]',
   },
   {
     title: 'Pizzas',
