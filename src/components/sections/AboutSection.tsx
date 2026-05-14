@@ -29,7 +29,7 @@ export default function AboutSection() {
           >
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80"
+                src="/images/ambiente.jpg"
                 alt="Interior do Zacota Restaurante"
                 fill
                 className="object-cover"
@@ -62,7 +62,7 @@ export default function AboutSection() {
                 O Zacota é um restaurante e pizzaria pensado para quem busca boa comida,
                 ambiente aconchegante e momentos especiais. Durante o dia, servimos pratos
                 saborosos com aquele toque de comida caseira e gourmet. À noite, a experiência
-                continua com pizzas, lanches, porções, bebidas e um ambiente perfeito para
+                continua com pizzas, porções, bebidas e um ambiente perfeito para
                 reunir família e amigos.
               </p>
             </div>

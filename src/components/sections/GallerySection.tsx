@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const images = [
-  { src: '/images/ambiente.jpg', alt: 'Ambiente do Zacota', tall: true },
-  { src: '/images/prato.jpg',    alt: 'Prato do Zacota',   tall: false },
-  { src: '/images/pizza.jpg',    alt: 'Pizza Guirlanda',   tall: false },
-  { src: '/images/porcao.jpg',   alt: 'Fritas com Costela', tall: true },
-  { src: '/images/bebida.jpg',   alt: 'Caip Chopp',        tall: false },
+  { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&auto=format&fit=crop&q=80', alt: 'Experiência Zacota', tall: true  },
+  { src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80', alt: 'Sabores especiais',  tall: false },
+  { src: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&auto=format&fit=crop&q=80', alt: 'Momentos únicos',   tall: false },
+  { src: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=600&auto=format&fit=crop&q=80', alt: 'Mesa do Zacota',    tall: true  },
+  { src: 'https://images.unsplash.com/photo-1551183053-bf91798d047e?w=600&auto=format&fit=crop&q=80', alt: 'Ambiente especial',  tall: false },
 ];
 
 export default function GallerySection() {
