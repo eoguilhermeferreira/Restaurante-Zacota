@@ -9,22 +9,22 @@ const categories = [
   {
     title: 'Pratos',
     description: 'Sabores caseiros e gourmet feitos com ingredientes frescos e muito carinho.',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80',
+    image: '/images/prato.jpg',
   },
   {
     title: 'Pizzas',
     description: 'Pizzas artesanais com massa crocante e recheios generosos para toda a família.',
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&auto=format&fit=crop&q=80',
+    image: '/images/pizza.jpg',
   },
   {
     title: 'Porções',
     description: 'Porções generosas ideais para compartilhar em boas companhias.',
-    image: 'https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=600&auto=format&fit=crop&q=80',
+    image: '/images/porcao.jpg',
   },
   {
     title: 'Bebidas',
     description: 'Drinks, sucos naturais, cervejas artesanais e refrigerantes gelados.',
-    image: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&auto=format&fit=crop&q=80',
+    image: '/images/bebida.jpg',
   },
 ];
 

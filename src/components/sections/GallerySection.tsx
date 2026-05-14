@@ -4,31 +4,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const images = [
-  {
-    src: '/images/gallery/ambiente.jpg',
-    alt: 'Ambiente do Zacota',
-    tall: true,
-  },
-  {
-    src: '/images/gallery/prato.jpg',
-    alt: 'Prato do Zacota',
-    tall: false,
-  },
-  {
-    src: '/images/gallery/pizza.jpg',
-    alt: 'Pizza Guirlanda',
-    tall: false,
-  },
-  {
-    src: '/images/gallery/porcao.jpg',
-    alt: 'Fritas com Costela',
-    tall: true,
-  },
-  {
-    src: '/images/gallery/bebida.jpg',
-    alt: 'Caip Chopp',
-    tall: false,
-  },
+  { src: '/images/ambiente.jpg', alt: 'Ambiente do Zacota', tall: true },
+  { src: '/images/prato.jpg',    alt: 'Prato do Zacota',   tall: false },
+  { src: '/images/pizza.jpg',    alt: 'Pizza Guirlanda',   tall: false },
+  { src: '/images/porcao.jpg',   alt: 'Fritas com Costela', tall: true },
+  { src: '/images/bebida.jpg',   alt: 'Caip Chopp',        tall: false },
 ];
 
 export default function GallerySection() {
