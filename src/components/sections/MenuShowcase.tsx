@@ -22,11 +22,6 @@ const categories = [
     image: 'https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=600&auto=format&fit=crop&q=80',
   },
   {
-    title: 'Lanches',
-    description: 'Hambúrgueres e sanduíches artesanais com ingredientes selecionados.',
-    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&auto=format&fit=crop&q=80',
-  },
-  {
     title: 'Bebidas',
     description: 'Drinks, sucos naturais, cervejas artesanais e refrigerantes gelados.',
     image: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&auto=format&fit=crop&q=80',

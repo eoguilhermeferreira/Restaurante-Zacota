@@ -5,43 +5,28 @@ import Image from 'next/image';
 
 const images = [
   {
-    src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=80',
-    alt: 'Interior do restaurante',
+    src: '/images/gallery/ambiente.jpg',
+    alt: 'Ambiente do Zacota',
     tall: true,
   },
   {
-    src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80',
-    alt: 'Prato especial',
+    src: '/images/gallery/prato.jpg',
+    alt: 'Prato do Zacota',
     tall: false,
   },
   {
-    src: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&auto=format&fit=crop&q=80',
-    alt: 'Pizza artesanal',
+    src: '/images/gallery/pizza.jpg',
+    alt: 'Pizza Guirlanda',
     tall: false,
   },
   {
-    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&auto=format&fit=crop&q=80',
-    alt: 'Mesa posta elegante',
+    src: '/images/gallery/porcao.jpg',
+    alt: 'Fritas com Costela',
     tall: true,
   },
   {
-    src: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&auto=format&fit=crop&q=80',
-    alt: 'Bebidas especiais',
-    tall: false,
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&auto=format&fit=crop&q=80',
-    alt: 'Pizza no forno',
-    tall: false,
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&auto=format&fit=crop&q=80',
-    alt: 'Pratos variados',
-    tall: true,
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop&q=80',
-    alt: 'Comida gourmet',
+    src: '/images/gallery/bebida.jpg',
+    alt: 'Caip Chopp',
     tall: false,
   },
 ];
@@ -102,28 +87,6 @@ export default function GallerySection() {
           ))}
         </div>
 
-        {/* Desktop: add more columns */}
-        <div className="hidden lg:flex gap-3 mt-3">
-          {images.slice(0, 4).map((img, i) => (
-            <motion.div
-              key={i}
-              className="relative flex-1 overflow-hidden rounded-xl group cursor-pointer"
-              style={{ height: i % 2 === 0 ? '200px' : '160px' }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-            >
-              <Image
-                src={images[(i + 4) % images.length].src}
-                alt={images[(i + 4) % images.length].alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-[#1a0005]/0 group-hover:bg-[#1a0005]/30 transition-colors duration-300" />
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
