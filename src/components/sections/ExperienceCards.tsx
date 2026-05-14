@@ -16,28 +16,28 @@ const cards = [
     title: 'Comida Feita com Carinho',
     description:
       'Cada prato preparado com ingredientes frescos e selecionados. Receitas que carregam sabor, história e muito amor.',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80',
+    image: '/images/exp-comida.jpg',
     tag: 'Gastronomia',
   },
   {
     title: 'Pizzas e Porções à Noite',
     description:
       'À noite, o Zacota se transforma. Pizzas artesanais saindo do forno, porções generosas e muita animação.',
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&auto=format&fit=crop&q=80',
+    image: '/images/exp-pizza-noite.jpg',
     tag: 'Noite',
   },
   {
     title: 'Momentos em Família',
     description:
       'O lugar ideal para reunir quem você ama. Mesas grandes, ambiente familiar e pratos para compartilhar.',
-    image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&auto=format&fit=crop&q=80',
+    image: '/images/exp-familia.jpg',
     tag: 'Família',
   },
   {
     title: 'Bebidas e Encontros',
     description:
       'Drinks artesanais, sucos naturais e cervejas especiais. O brinde perfeito para celebrar bons momentos.',
-    image: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=800&auto=format&fit=crop&q=80',
+    image: '/images/exp-encontros.jpg',
     tag: 'Bebidas',
   },
 ];
