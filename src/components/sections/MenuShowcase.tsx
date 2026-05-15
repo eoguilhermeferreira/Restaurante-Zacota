@@ -28,7 +28,7 @@ const categories = [
     title: 'Bebidas',
     description: 'Drinks, sucos naturais, cervejas artesanais e refrigerantes gelados.',
     image: '/images/bebida2.jpg',
-    objectPosition: 'center 5%',
+    objectPosition: 'center',
   },
 ];
 
