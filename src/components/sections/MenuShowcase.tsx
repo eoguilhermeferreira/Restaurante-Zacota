@@ -10,25 +10,25 @@ const categories = [
     title: 'Pratos',
     description: 'Sabores caseiros e gourmet feitos com ingredientes frescos e muito carinho.',
     image: '/images/prato.jpg',
-    position: 'object-[center_60%]',
+    objectPosition: 'center 60%',
   },
   {
     title: 'Pizzas',
     description: 'Pizzas artesanais com massa crocante e recheios generosos para toda a família.',
     image: '/images/pizza2.jpg',
-    position: 'object-center',
+    objectPosition: 'center',
   },
   {
     title: 'Porções',
     description: 'Porções generosas ideais para compartilhar em boas companhias.',
     image: '/images/porcao2.jpg',
-    position: 'object-center',
+    objectPosition: 'center',
   },
   {
     title: 'Bebidas',
     description: 'Drinks, sucos naturais, cervejas artesanais e refrigerantes gelados.',
     image: '/images/bebida2.jpg',
-    position: 'object-top',
+    objectPosition: 'center 15%',
   },
 ];
 
@@ -75,7 +75,8 @@ export default function MenuShowcase() {
                   src={cat.image}
                   alt={cat.title}
                   fill
-                  className={`object-cover ${cat.position} transition-transform duration-500 group-hover:scale-105`}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{ objectPosition: cat.objectPosition }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0005]/70 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-4">
