@@ -1,4 +1,4 @@
-export const CARDAPIO_URL = "https://zacotaavare.eatfood.app/category";
+export const CARDAPIO_URL = "https://www.cardapiozacota.com.br/";
 export const INSTAGRAM_URL = "https://instagram.com/zacotarestaurante";
 export const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Rua+Goiás+1079,+Centro,+Avaré+SP";
 export const GOOGLE_MAPS_EMBED = "https://maps.google.com/maps?q=Rua+Goiás+1079,+Centro,+Avaré,+SP,+18701-140&output=embed&z=16";
