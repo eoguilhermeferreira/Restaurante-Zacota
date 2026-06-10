@@ -40,7 +40,6 @@ export default function VideoSection() {
         >
           <video
             ref={videoRef}
-            src="/videos/zacota-hero.mov"
             autoPlay
             muted
             loop
@@ -49,7 +48,10 @@ export default function VideoSection() {
             className="w-full h-full object-cover"
             controls={false}
             disablePictureInPicture
-          />
+          >
+            <source src="/videos/zacota-hero.mp4" type="video/mp4" />
+            <source src="/videos/zacota-hero.mov" type="video/quicktime" />
+          </video>
         </motion.div>
       </div>
     </section>
