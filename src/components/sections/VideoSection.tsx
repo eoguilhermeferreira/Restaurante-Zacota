@@ -14,7 +14,6 @@ export default function VideoSection() {
 
   const height = useTransform(scrollYProgress, [0, 0.85], ['65vh', '92vh']);
   const borderRadius = useTransform(scrollYProgress, [0, 0.85], ['24px', '8px']);
-  const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -35,7 +34,7 @@ export default function VideoSection() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#d4a373]/5 blur-3xl pointer-events-none" />
 
         <motion.div
-          style={{ height, borderRadius, opacity, aspectRatio: '9/16' }}
+          style={{ height, borderRadius, aspectRatio: '9/16' }}
           className="relative overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.7)]"
         >
           <video
@@ -45,6 +44,7 @@ export default function VideoSection() {
             loop
             playsInline
             preload="auto"
+            poster="/images/zacota-fachada-nova.png"
             className="w-full h-full object-cover"
             controls={false}
             disablePictureInPicture
